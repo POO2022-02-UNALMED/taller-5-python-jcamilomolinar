@@ -1,4 +1,3 @@
-from wsgiref.util import request_uri
 from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
@@ -39,13 +38,15 @@ class Anfibio(Animal):
     def cantidadAnfibios(cls):
         return len(cls.listado)
     
-    def crearRana(self, nombre, edad, genero):
+    @classmethod
+    def crearRana(cls, nombre, edad, genero):
         nuevoani = Anfibio(nombre, edad, "selva", genero, "rojo", True)
         Anfibio.listado.append(nuevoani)
         Anfibio.ranas += 1
         return nuevoani
     
-    def crearSalamandra(self, nombre, edad, genero):
+    @classmethod
+    def crearSalamandra(cls, nombre, edad, genero):
         nuevoani = Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
         Anfibio.listado.append(nuevoani)
         Anfibio.salamandras += 1

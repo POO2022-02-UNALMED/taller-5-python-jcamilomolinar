@@ -38,13 +38,15 @@ class Reptil(Animal):
     def cantidadReptiles(cls):
         return len(cls.listado)
     
-    def crearIguana(self, nombre, edad, genero):
+    @classmethod
+    def crearIguana(cls, nombre, edad, genero):
         nuevoani = Reptil(nombre, edad, "humedal", genero, "verde", 3)
         Reptil.listado.append(nuevoani)
         Reptil.iguanas += 1
         return nuevoani
     
-    def crearSerpiente(self, nombre, edad, genero):
+    @classmethod
+    def crearSerpiente(cls, nombre, edad, genero):
         nuevoani = Reptil(nombre, edad, "jungla", genero, "blanco", 1)
         Reptil.listado.append(nuevoani)
         Reptil.serpientes += 1
