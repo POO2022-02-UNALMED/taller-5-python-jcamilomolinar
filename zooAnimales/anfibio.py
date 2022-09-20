@@ -13,6 +13,7 @@ class Anfibio(Animal):
         Animal.sumarAnimal()
         self.mov = "saltar"
         Anfibio.listado.append(self)
+        Animal.anf += 1
     
     @classmethod
     def getListado(cls):

@@ -1,12 +1,7 @@
-from mamifero import Mamifero
-from ave import Ave
-from reptil import Reptil
-from pez import Pez
-from anfibio import Anfibio
-
 class Animal:
 
     totalAnimales = 0
+    anf, rep, ave, mam, pez = 0, 0, 0, 0, 0
 
     def __init__(self, nombre, edad, habitat, genero, zona = None):
         self._nombre = nombre
@@ -58,7 +53,7 @@ class Animal:
     @classmethod
     def totalPorTipo(cls):
         muestra = "Mamiferos: {}\n" + "Aves: {}\n" + "Reptiles: {}\n" + "Peces: {}\n" + "Anfibios: {}"
-        return muestra.format(len(Mamifero.getListado()), len(Ave.getListado()), len(Reptil.getListado()), len(Pez.getListado()), len(Anfibio.getListado()))
+        return muestra.format(Animal.mam, Animal.ave, Animal.rep, Animal.pez, Animal.anf)
 
     def __str__(self):
         if self._zona == None:

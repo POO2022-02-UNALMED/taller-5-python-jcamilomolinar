@@ -13,6 +13,7 @@ class Ave(Animal):
         Animal.sumarAnimal()
         self.mov = "volar"
         Ave.listado.append(self)
+        Animal.ave += 1
 
     def getColorPlumas(self):
         return self._colorPlumas

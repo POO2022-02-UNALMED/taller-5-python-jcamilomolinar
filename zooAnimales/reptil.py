@@ -13,6 +13,7 @@ class Reptil(Animal):
         Animal.sumarAnimal()
         self.mov = "reptar"
         Reptil.listado.append(self)
+        Animal.rep += 1
     
     @classmethod
     def getListado(cls):

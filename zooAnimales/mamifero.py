@@ -12,6 +12,7 @@ class Mamifero(Animal):
         self._patas = patas
         Animal.sumarAnimal()
         Mamifero.listado.append(self)
+        Animal.mam += 1
     
     @classmethod
     def getListado(cls):
