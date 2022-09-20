@@ -41,7 +41,7 @@ class Ave(Animal):
         return nuevoani
     
     @classmethod
-    def crearHalcon(cls, nombre, edad, genero):
+    def crearAguila(cls, nombre, edad, genero):
         nuevoani = Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
         Ave.listado.append(nuevoani)
         Ave.aguilas += 1

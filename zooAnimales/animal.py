@@ -52,10 +52,10 @@ class Animal:
 
     @classmethod
     def totalPorTipo(cls):
-        muestra = "Mamiferos: {}\n" + "Aves: {}\n" + "Reptiles: {}\n" + "Peces: {}\n" + "Anfibios: {}"
+        muestra = "Mamiferos : {}\n" + "Aves : {}\n" + "Reptiles : {}\n" + "Peces : {}\n" + "Anfibios : {}"
         return muestra.format(Animal.mam, Animal.ave, Animal.rep, Animal.pez, Animal.anf)
 
-    def __str__(self):
+    def toString(self):
         if self._zona == None:
             muestra = "Mi nombre es {}, tengo una edad de {}, habito en {} y mi genero es {}"
             return muestra.format(self._nombre, self._edad, self._habitat, self._genero)
